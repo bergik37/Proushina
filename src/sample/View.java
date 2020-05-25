@@ -10,16 +10,16 @@ public class View {
 
 
     @FXML
-    private TextField myTextField6;
+    private TextField myTextField19;
     @FXML
     private TextField myTextField7;
 
-    void myTextField6(Double s) {
+    void myTextField19(Double s) {
 
-        myTextField6.setText(String.valueOf(s));
+        myTextField19.setText(String.valueOf(s));
     }
 
-    void myTextField7(Double s) {
+    /*void myTextField7(Double s) {
         if(myTextField6.getText().equals("")){
             myTextField7.setPromptText("Ввести действующие напряжения");
             myTextField7.clear();
@@ -30,5 +30,5 @@ public class View {
         }
 
 
-    }
+    }*/
 }

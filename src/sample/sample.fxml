@@ -8,7 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane prefHeight="950.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Label layoutX="511.0" layoutY="14.0" prefHeight="17.0" prefWidth="87.0" text="Вид проушины" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
@@ -87,19 +87,24 @@
       <TextField fx:id="myTextField13" layoutX="761.0" layoutY="713.0" />
       <TextField fx:id="myTextField14" layoutX="761.0" layoutY="741.0" />
       <TextField fx:id="myTextField15" layoutX="761.0" layoutY="769.0" />
-      <Label layoutX="725.0" layoutY="689.0" text="P1=" />
-      <Label layoutX="725.0" layoutY="717.0" text="P2=" />
-      <Label layoutX="725.0" layoutY="745.0" text="P3=" />
-      <Label layoutX="725.0" layoutY="773.0" text="P4=" />
+      <Label layoutX="725.0" layoutY="689.0" text="Prast=" />
+      <Label layoutX="725.0" layoutY="717.0" text="Psrez=" />
+      <Label layoutX="725.0" layoutY="745.0" text="Psmt=" />
+      <Label layoutX="725.0" layoutY="773.0" text="Prazr=" />
       <TextField fx:id="myTextField16" layoutX="1000.0" layoutY="685.0" />
       <TextField fx:id="myTextField17" layoutX="1000.0" layoutY="713.0" />
       <TextField fx:id="myTextField18" layoutX="1000.0" layoutY="741.0" />
       <TextField fx:id="myTextField19" layoutX="1000.0" layoutY="772.0" />
-      <Label layoutX="980.0" layoutY="689.0" text="η=" />
-      <Label layoutX="980.0" layoutY="717.0" text="η=" />
-      <Label layoutX="980.0" layoutY="745.0" text="η=" />
-      <Label layoutX="980.0" layoutY="773.0" text="η=" />
+      <Label layoutX="960.0" layoutY="689.0" text="ηrast=" />
+      <Label layoutX="960.0" layoutY="717.0" text="ηsres=" />
+      <Label layoutX="960.0" layoutY="745.0" text="ηsmt=" />
+      <Label layoutX="960.0" layoutY="773.0" text="ηrazr=" />
       <Label layoutX="276.0" layoutY="658.0" prefHeight="17.0" prefWidth="275.0" text="Данные для расчета односрезной проушины" />
       <Label layoutX="8.0" layoutY="658.0" prefHeight="17.0" prefWidth="253.0" text="Данные для расчета двухсрезной проушины" />
+      <Label layoutX="20.0" layoutY="885.0" text="h=" />
+      <TextField fx:id="myTextField20" layoutX="40.0" layoutY="881.0" />
+      <Label layoutX="20.0" layoutY="915.0" text="P=" />
+      <TextField fx:id="myTextField21" layoutX="40.0" layoutY="911.0" />
+      <Button layoutX="259.0" layoutY="500.0" mnemonicParsing="false" onAction="#maxsize" prefHeight="122.0" prefWidth="200.0" text="Button" />
    </children>
 </Pane>
