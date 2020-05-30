@@ -45,6 +45,20 @@ public class Controller extends View implements Initializable {
     private TextField myTextField20;
     @FXML
     private TextField myTextField21;
+    @FXML
+    private TextField myTextField22;
+    @FXML
+    private TextField myTextField23;
+    @FXML
+    private TextField myTextField24;
+    @FXML
+    private TextField myTextField25;
+    @FXML
+    private TextField myTextField26;
+    @FXML
+    private TextField myTextField27;
+    @FXML
+    private TextField myTextField28;
 
     @FXML
     private CheckBox checkbox1;
@@ -87,6 +101,13 @@ public class Controller extends View implements Initializable {
        myTextField11.setTextFormatter(new AlphaNumericTextFormatter());
        myTextField20.setTextFormatter(new AlphaNumericTextFormatter());
        myTextField21.setTextFormatter(new AlphaNumericTextFormatter());
+       myTextField22.setTextFormatter(new AlphaNumericTextFormatter());
+       myTextField23.setTextFormatter(new AlphaNumericTextFormatter());
+       myTextField24.setTextFormatter(new AlphaNumericTextFormatter());
+       myTextField25.setTextFormatter(new AlphaNumericTextFormatter());
+       myTextField26.setTextFormatter(new AlphaNumericTextFormatter());
+       myTextField27.setTextFormatter(new AlphaNumericTextFormatter());
+       myTextField28.setTextFormatter(new AlphaNumericTextFormatter());
    }
 /*
 Кнопка решения
@@ -111,17 +132,25 @@ public class Controller extends View implements Initializable {
         model.setNum11(parseDouble(myTextField11.getText()));
         model.setNum20(parseDouble(myTextField20.getText()));
         model.setNum21(parseDouble(myTextField21.getText()));
+        model.setNum22(parseDouble(myTextField21.getText()));
+        model.setNum23(parseDouble(myTextField21.getText()));
+        model.setNum24(parseDouble(myTextField21.getText()));
+        model.setNum25(parseDouble(myTextField21.getText()));
+        model.setNum26(parseDouble(myTextField21.getText()));
+        model.setNum27(parseDouble(myTextField21.getText()));
+        model.setNum28(parseDouble(myTextField21.getText()));
 
 
 
-     /*if(myTextField5.getText().equals("")){
-        myTextField5.setPromptText("Уточните значение");
-        myTextField5.clear();
+     if(myTextField25.getText().equals("")){
+         myTextField25.setPromptText("Уточните значение");
+         myTextField25.clear();
      }
      else
- {
-         model.setNum5(parseDouble(myTextField5.getText()));
-     }*/
+    {
+         model.setNum25(parseDouble(myTextField25.getText()));
+     }
+
 
         model.setCheckBox1(checkbox1);
         model.setCheckBox2(checkbox2);
@@ -141,7 +170,14 @@ public class Controller extends View implements Initializable {
 
 
         // дальше нужно вывести результат
-        myTextField19(model.getResult());
+        myTextField12(model.getResultPrast());
+        myTextField13(model.getResultPsrez());
+        myTextField14(model.getResultPsmt());
+        myTextField15(model.getResultPrazr());
+        myTextField16(model.getResultηrast());
+        myTextField17(model.getResultηsrez());
+        myTextField18(model.getResultηsmt());
+        myTextField19(model.getResultηrazr());
         //myTextField7(model.getResultzapas());
     }
 

@@ -10,6 +10,7 @@
     <version>1.0</version>
     <build>
 
+
         <plugins>
 
             <!-- Maven JAR Plugin -->
@@ -33,6 +34,14 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.3</version>
+                <configuration>
+                    <mainClass>com.example.App</mainClass>
+                </configuration>
+            </plugin>
 
         </plugins>
 
@@ -44,6 +53,11 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
             <version>4.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>11.0.2</version>
         </dependency>
 
     </dependencies>
