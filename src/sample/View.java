@@ -24,7 +24,10 @@ public class View {
     private TextField myTextField18;
     @FXML
     private TextField myTextField19;
-
+    @FXML
+    private TextField myTextField29;
+    @FXML
+    private TextField myTextField30;
 
     void myTextField12(String s) {
         myTextField12.setText((s));
@@ -49,6 +52,12 @@ public class View {
     }
     void myTextField19(String s) {
         myTextField19.setText((s));
+    }
+    void myTextField29(String s) {
+        myTextField29.setText((s));
+    }
+    void myTextField30(String s) {
+        myTextField30.setText((s));
     }
 
 

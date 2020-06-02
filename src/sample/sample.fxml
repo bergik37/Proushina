@@ -1,120 +1,192 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane prefHeight="1050.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane prefHeight="1000.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Label layoutX="511.0" layoutY="14.0" prefHeight="17.0" prefWidth="87.0" text="Вид проушины" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="2006.0" fitWidth="2768.0" layoutX="-253.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="51.0" layoutY="10.0" prefHeight="27.0" prefWidth="150.0" text="Вид проушины">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@vidProushin1.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@vidProushin2.jpg" />
          </image>
       </ImageView>
-      <CheckBox fx:id="checkbox1" layoutX="323.0" layoutY="145.0" mnemonicParsing="false" text="Односрезная проушина" />
-      <CheckBox fx:id="checkbox2" layoutX="625.0" layoutY="145.0" mnemonicParsing="false" text="Двухсрезная проушина" />
-      <Label layoutX="513.0" layoutY="174.0" prefHeight="17.0" prefWidth="150.0" text="Вид нигрузки" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <CheckBox fx:id="checkbox1" layoutX="10.0" layoutY="144.0" mnemonicParsing="false" text="Односрезная проушина">
+         <font>
+            <Font size="18.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="checkbox2" layoutX="10.0" layoutY="289.0" mnemonicParsing="false" text="Двухсрезная проушина">
+         <font>
+            <Font size="18.0" />
+         </font></CheckBox>
+      <Label layoutX="290.0" layoutY="10.0" prefHeight="17.0" prefWidth="150.0" text="Вид нигрузки">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="265.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Sila3.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="500.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="265.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Sila4.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="800.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="265.0" layoutY="374.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Sila5.jpg" />
          </image>
       </ImageView>
-      <CheckBox fx:id="checkbox3" layoutX="230.0" layoutY="375.0" mnemonicParsing="false" text="Осевая нагрузка" />
-      <CheckBox fx:id="checkbox4" layoutX="511.0" layoutY="375.0" mnemonicParsing="false" text="Перпендикулярная нагрузка" />
-      <CheckBox fx:id="checkbox5" layoutX="803.0" layoutY="367.0" mnemonicParsing="false" text="Результирующая нагрузка" />
-      <Label layoutX="513.0" layoutY="415.0" text="Материалы" />
-      <CheckBox fx:id="checkbox6" layoutX="190.0" layoutY="440.0" mnemonicParsing="false" text="Дюраль" />
-      <CheckBox fx:id="checkbox7" layoutX="440.0" layoutY="440.0" mnemonicParsing="false" text="Нормализованная углеродистая сталь" />
-      <CheckBox fx:id="checkbox8" layoutX="739.0" layoutY="440.0" mnemonicParsing="false" text="Сталь 30 ХГСА" />
-      <CheckBox fx:id="checkbox9" layoutX="908.0" layoutY="440.0" mnemonicParsing="false" text="Титан" />
-      <Label layoutX="499.0" layoutY="482.0" text="Тип проушины" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="255.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true">
+      <CheckBox fx:id="checkbox3" layoutX="244.0" layoutY="175.0" mnemonicParsing="false" text="Осевая нагрузка">
+         <font>
+            <Font size="18.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="checkbox4" layoutX="244.0" layoutY="327.0" mnemonicParsing="false" text="Перпендикулярная нагрузка">
+         <font>
+            <Font size="18.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="checkbox5" layoutX="244.0" layoutY="524.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="268.0" text="Результирующая нагрузка">
+         <font>
+            <Font size="18.0" />
+         </font></CheckBox>
+      <Label layoutX="609.0" layoutY="10.0" text="Материалы">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <CheckBox fx:id="checkbox6" layoutX="496.0" layoutY="58.0" mnemonicParsing="false" text="Дюраль">
+         <font>
+            <Font size="18.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="checkbox7" layoutX="496.0" layoutY="91.0" mnemonicParsing="false" text="Нормализованная углеродистая сталь">
+         <font>
+            <Font size="18.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="checkbox8" layoutX="496.0" layoutY="124.0" mnemonicParsing="false" text="Сталь 30 ХГСА">
+         <font>
+            <Font size="18.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="checkbox9" layoutX="496.0" layoutY="157.0" mnemonicParsing="false" text="Титан">
+         <font>
+            <Font size="18.0" />
+         </font></CheckBox>
+      <Label layoutX="906.0" layoutY="10.0" text="Тип проушины">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="859.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@TipProushin6.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="625.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="859.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@TipProushin7.jpg" />
          </image>
       </ImageView>
-      <CheckBox fx:id="checkbox10" layoutX="305.0" layoutY="631.0" mnemonicParsing="false" text="Одинарная проушина" />
-      <CheckBox fx:id="checkbox11" layoutX="683.0" layoutY="631.0" mnemonicParsing="false" text="Двойная проушина" />
-      <Label layoutX="20.0" layoutY="689.0" text="b=" />
-      <TextField fx:id="myTextField1" layoutX="40.0" layoutY="685.0" />
-      <Label layoutX="20.0" layoutY="717.0" text="d=" />
-      <TextField fx:id="myTextField2" layoutX="40.0" layoutY="713.0" />
-      <Label layoutX="20.0" layoutY="745.0" text="a=" />
-      <TextField fx:id="myTextField3" layoutX="40.0" layoutY="741.0" />
-      <Label layoutX="20.0" layoutY="773.0" text="δ=" />
-      <TextField fx:id="myTextField4" layoutX="40.0" layoutY="769.0" />
-      <Label layoutX="20.0" layoutY="801.0" text="σв=" />
-      <TextField fx:id="myTextField5" layoutX="40.0" layoutY="797.0" />
-      <Label layoutX="13.0" layoutY="829.0" prefHeight="17.0" prefWidth="35.0" text="σ02=" />
-      <TextField fx:id="myTextField6" layoutX="40.0" layoutY="825.0" />
-      <Label layoutX="287.0" layoutY="689.0" text="b1*=" />
-      <TextField fx:id="myTextField8" layoutX="314.0" layoutY="685.0" />
-      <Label layoutX="286.0" layoutY="717.0" text="b2*=" />
-      <TextField fx:id="myTextField9" layoutX="314.0" layoutY="713.0" />
-      <TextField fx:id="myTextField10" layoutX="314.0" layoutY="741.0" />
-      <TextField fx:id="myTextField11" layoutX="314.0" layoutY="769.0" />
-      <Label layoutX="285.0" layoutY="745.0" text="E1*=" />
-      <Label layoutX="284.0" layoutY="773.0" text="E2*=" />
-      <Label layoutX="20.0" layoutY="857.0" text="E=" />
-      <TextField fx:id="myTextField7" layoutX="40.0" layoutY="853.0" />
-      <Button layoutX="520.0" layoutY="733.0" mnemonicParsing="false" onAction="#solve" prefHeight="51.0" prefWidth="165.0" text="=" />
-      <TextField fx:id="myTextField12" layoutX="761.0" layoutY="685.0" />
-      <TextField fx:id="myTextField13" layoutX="761.0" layoutY="713.0" />
-      <TextField fx:id="myTextField14" layoutX="761.0" layoutY="741.0" />
-      <TextField fx:id="myTextField15" layoutX="761.0" layoutY="769.0" />
-      <Label layoutX="725.0" layoutY="689.0" text="Prast=" />
-      <Label layoutX="725.0" layoutY="717.0" text="Psrez=" />
-      <Label layoutX="725.0" layoutY="745.0" text="Psmt=" />
-      <Label layoutX="725.0" layoutY="773.0" text="Prazr=" />
-      <TextField fx:id="myTextField16" layoutX="1000.0" layoutY="685.0" />
-      <TextField fx:id="myTextField17" layoutX="1000.0" layoutY="713.0" />
-      <TextField fx:id="myTextField18" layoutX="1000.0" layoutY="741.0" />
-      <TextField fx:id="myTextField19" layoutX="1000.0" layoutY="772.0" />
-      <Label layoutX="960.0" layoutY="689.0" text="ηrast=" />
-      <Label layoutX="960.0" layoutY="717.0" text="ηsres=" />
-      <Label layoutX="960.0" layoutY="745.0" text="ηsmt=" />
-      <Label layoutX="960.0" layoutY="773.0" text="ηrazr=" />
-      <Label layoutX="276.0" layoutY="658.0" prefHeight="17.0" prefWidth="275.0" text="Данные для расчета односрезной проушины" />
-      <Label layoutX="8.0" layoutY="658.0" prefHeight="17.0" prefWidth="253.0" text="Данные для расчета двухсрезной проушины" />
-      <Label layoutX="5.0" layoutY="885.0" prefHeight="17.0" prefWidth="52.0" text="h,h3=" />
-      <TextField fx:id="myTextField20" layoutX="40.0" layoutY="881.0" />
-      <Label layoutX="20.0" layoutY="915.0" text="P=" />
-      <TextField fx:id="myTextField21" layoutX="40.0" layoutY="909.0" />
-      <Button layoutX="259.0" layoutY="500.0" mnemonicParsing="false" onAction="#maxsize" prefHeight="122.0" prefWidth="200.0" text="Button" />
-      <TextField fx:id="myTextField22" layoutX="314.0" layoutY="797.0" />
-      <TextField fx:id="myTextField23" layoutX="314.0" layoutY="825.0" />
-      <TextField fx:id="myTextField24" layoutX="314.0" layoutY="853.0" />
-      <Label layoutX="283.0" layoutY="801.0" text="δ1=" />
-      <Label layoutX="283.0" layoutY="829.0" text="δ2=" />
-      <Label layoutX="283.0" layoutY="857.0" text="g" />
-      <TextField fx:id="myTextField25" layoutX="40.0" layoutY="937.0" />
-      <TextField fx:id="myTextField26" layoutX="40.0" layoutY="965.0" />
-      <TextField fx:id="myTextField27" layoutX="40.0" layoutY="993.0" />
-      <Label layoutX="20.0" layoutY="941.0" text="h1=" />
-      <Label layoutX="20.0" layoutY="969.0" text="h2=" />
-      <Label layoutX="20.0" layoutY="997.0" text="h4=" />
-      <TextField fx:id="myTextField28" layoutX="40.0" layoutY="1021.0" />
-      <Label layoutX="20.0" layoutY="1025.0" text="α=" />
+      <CheckBox fx:id="checkbox10" layoutX="859.0" layoutY="294.0" mnemonicParsing="false" text="Одинарная проушина">
+         <font>
+            <Font size="18.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="checkbox11" layoutX="859.0" layoutY="588.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="245.0" text="Двойная проушина">
+         <font>
+            <Font size="18.0" />
+         </font></CheckBox>
+      <Label layoutX="27.0" layoutY="689.0" text="b=" />
+      <TextField fx:id="myTextField1" layoutX="47.0" layoutY="685.0" text="60.0" />
+      <Label layoutX="615.0" layoutY="773.0" text="d=" />
+      <TextField fx:id="myTextField2" layoutX="635.0" layoutY="769.0" text="24.0" />
+      <Label layoutX="603.0" layoutY="801.0" prefHeight="17.0" prefWidth="42.0" text="a,h3=" />
+      <TextField fx:id="myTextField3" layoutX="635.0" layoutY="797.0" text="18.0" />
+      <Label layoutX="27.0" layoutY="717.0" text="δ=" />
+      <TextField fx:id="myTextField4" layoutX="47.0" layoutY="713.0" text="10.0" />
+      <Label layoutX="615.0" layoutY="689.0" text="σв=" />
+      <TextField fx:id="myTextField5" layoutX="635.0" layoutY="685.0" text="440.0" />
+      <Label layoutX="608.0" layoutY="717.0" prefHeight="17.0" prefWidth="35.0" text="σ02=" />
+      <TextField fx:id="myTextField6" layoutX="635.0" layoutY="713.0" text="290.0" />
+      <Label layoutX="393.0" layoutY="689.0" text="b1*=" />
+      <TextField fx:id="myTextField8" layoutX="420.0" layoutY="685.0" text="60.0" />
+      <Label layoutX="392.0" layoutY="717.0" text="b2*=" />
+      <TextField fx:id="myTextField9" layoutX="420.0" layoutY="713.0" text="60.0" />
+      <TextField fx:id="myTextField10" layoutX="421.0" layoutY="741.0" text="70000.0" />
+      <TextField fx:id="myTextField11" layoutX="421.0" layoutY="769.0" text="70000.0" />
+      <Label layoutX="392.0" layoutY="745.0" text="E1*=" />
+      <Label layoutX="391.0" layoutY="773.0" text="E2*=" />
+      <Button layoutX="912.0" layoutY="681.0" mnemonicParsing="false" onAction="#solve" prefHeight="51.0" prefWidth="165.0" text="=">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Button>
+      <TextField fx:id="myTextField12" layoutX="833.0" layoutY="771.0" />
+      <TextField fx:id="myTextField13" layoutX="833.0" layoutY="799.0" />
+      <TextField fx:id="myTextField14" layoutX="833.0" layoutY="827.0" />
+      <TextField fx:id="myTextField15" layoutX="833.0" layoutY="883.0" />
+      <Label layoutX="797.0" layoutY="775.0" text="Prast=" />
+      <Label layoutX="797.0" layoutY="803.0" text="Psrez=" />
+      <Label layoutX="797.0" layoutY="831.0" text="Psmt=" />
+      <Label layoutX="797.0" layoutY="885.0" text="Prazr=" />
+      <TextField fx:id="myTextField16" layoutX="1034.0" layoutY="771.0" />
+      <TextField fx:id="myTextField17" layoutX="1034.0" layoutY="799.0" />
+      <TextField fx:id="myTextField18" layoutX="1034.0" layoutY="827.0" />
+      <TextField fx:id="myTextField19" layoutX="1034.0" layoutY="883.0" />
+      <Label layoutX="994.0" layoutY="775.0" text="ηrast=" />
+      <Label layoutX="994.0" layoutY="803.0" text="ηsres=" />
+      <Label layoutX="994.0" layoutY="831.0" text="ηsmt=" />
+      <Label layoutX="994.0" layoutY="885.0" text="ηrazr=" />
+      <Label layoutX="400.0" layoutY="595.0" prefHeight="76.0" prefWidth="215.0" text="Данные для расчета &#10;односрезной проушины">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="102.0" layoutY="595.0" prefHeight="76.0" prefWidth="245.0" text="Данные для расчета &#10;двухсрезной проушины">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="615.0" layoutY="829.0" prefHeight="17.0" prefWidth="21.0" text="h=" />
+      <TextField fx:id="myTextField20" layoutX="636.0" layoutY="825.0" text="18.0" />
+      <Label layoutX="615.0" layoutY="745.0" text="P=" />
+      <TextField fx:id="myTextField21" layoutX="635.0" layoutY="741.0" text="70000.0" />
+      <TextField fx:id="myTextField22" layoutX="421.0" layoutY="797.0" text="10.0" />
+      <TextField fx:id="myTextField23" layoutX="421.0" layoutY="825.0" text="10.0" />
+      <TextField fx:id="myTextField24" layoutX="421.0" layoutY="853.0" text="0.1" />
+      <Label layoutX="390.0" layoutY="801.0" text="δ1=" />
+      <Label layoutX="390.0" layoutY="829.0" text="δ2=" />
+      <Label layoutX="390.0" layoutY="857.0" prefHeight="17.0" prefWidth="16.0" text="g=" />
+      <TextField fx:id="myTextField25" layoutX="224.0" layoutY="685.0" text="21.5" />
+      <TextField fx:id="myTextField26" layoutX="224.0" layoutY="713.0" text="18.0" />
+      <TextField fx:id="myTextField27" layoutX="224.0" layoutY="741.0" text="21.5" />
+      <Label layoutX="204.0" layoutY="689.0" text="h1=" />
+      <Label layoutX="204.0" layoutY="717.0" text="h2=" />
+      <Label layoutX="204.0" layoutY="745.0" text="h4=" />
+      <TextField fx:id="myTextField28" layoutX="224.0" layoutY="769.0" text="30.0" />
+      <Label layoutX="207.0" layoutY="773.0" text="α=" />
+      <ImageView fitHeight="186.0" fitWidth="215.0" layoutX="591.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@TipProushin8.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="168.0" fitWidth="326.0" layoutX="537.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@vidb.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="797.0" layoutY="857.0" text="Ppr=" />
+      <TextField fx:id="myTextField29" layoutX="833.0" layoutY="855.0" />
+      <TextField fx:id="myTextField30" layoutX="1034.0" layoutY="855.0" />
+      <Label layoutX="994.0" layoutY="857.0" text="ηpr=" />
    </children>
 </Pane>

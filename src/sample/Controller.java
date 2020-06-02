@@ -31,8 +31,8 @@ public class Controller extends View implements Initializable {
     private TextField myTextField5;
     @FXML
     private TextField myTextField6;
-    @FXML
-    private TextField myTextField7;
+   /* @FXML
+    private TextField myTextField7;*/
     @FXML
     private TextField myTextField8;
     @FXML
@@ -94,7 +94,7 @@ public class Controller extends View implements Initializable {
        myTextField3.setTextFormatter(new AlphaNumericTextFormatter());
        myTextField4.setTextFormatter(new AlphaNumericTextFormatter());
        myTextField6.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField7.setTextFormatter(new AlphaNumericTextFormatter());
+//       myTextField7.setTextFormatter(new AlphaNumericTextFormatter());
        myTextField8.setTextFormatter(new AlphaNumericTextFormatter());
        myTextField9.setTextFormatter(new AlphaNumericTextFormatter());
        myTextField10.setTextFormatter(new AlphaNumericTextFormatter());
@@ -125,31 +125,31 @@ public class Controller extends View implements Initializable {
         model.setNum4(parseDouble(myTextField4.getText()));
         model.setNum5(parseDouble(myTextField5.getText()));
         model.setNum6(parseDouble(myTextField6.getText()));
-        model.setNum7(parseDouble(myTextField7.getText()));
+       // model.setNum7(parseDouble(myTextField7.getText()));
         model.setNum8(parseDouble(myTextField8.getText()));
         model.setNum9(parseDouble(myTextField9.getText()));
         model.setNum10(parseDouble(myTextField10.getText()));
         model.setNum11(parseDouble(myTextField11.getText()));
         model.setNum20(parseDouble(myTextField20.getText()));
         model.setNum21(parseDouble(myTextField21.getText()));
-        model.setNum22(parseDouble(myTextField21.getText()));
-        model.setNum23(parseDouble(myTextField21.getText()));
-        model.setNum24(parseDouble(myTextField21.getText()));
-        model.setNum25(parseDouble(myTextField21.getText()));
-        model.setNum26(parseDouble(myTextField21.getText()));
-        model.setNum27(parseDouble(myTextField21.getText()));
-        model.setNum28(parseDouble(myTextField21.getText()));
+        model.setNum22(parseDouble(myTextField22.getText()));
+        model.setNum23(parseDouble(myTextField23.getText()));
+        model.setNum24(parseDouble(myTextField24.getText()));
+        model.setNum25(parseDouble(myTextField25.getText()));
+        model.setNum26(parseDouble(myTextField26.getText()));
+        model.setNum27(parseDouble(myTextField27.getText()));
+        model.setNum28(parseDouble(myTextField28.getText()));
 
 
 
-     if(myTextField25.getText().equals("")){
+  /*   if(myTextField25.getText().equals("")){
          myTextField25.setPromptText("Уточните значение");
          myTextField25.clear();
      }
      else
     {
          model.setNum25(parseDouble(myTextField25.getText()));
-     }
+     }*/
 
 
         model.setCheckBox1(checkbox1);
@@ -179,6 +179,8 @@ public class Controller extends View implements Initializable {
         myTextField18(model.getResultηsmt());
         myTextField19(model.getResultηrazr());
         //myTextField7(model.getResultzapas());
+        myTextField29(model.getResultPpr());
+        myTextField30(model.getResultηpr());
     }
 
     public void maxsize() throws FileNotFoundException {
