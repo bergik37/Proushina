@@ -1,7 +1,9 @@
 package sample;
 
+import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 
+import javafx.scene.control.TextField;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
@@ -19,6 +21,7 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 
 public class Model {
+
 
     private double kx;
     private double uv;
@@ -273,7 +276,7 @@ public class Model {
         Односрезная проушина проушина осевая сила
          */
         else if ((checkbox1.isSelected() && checkbox3.isSelected())) {
-            if (checkbox6.isSelected() || checkbox7.isSelected() || checkbox8.isSelected()) {
+            //if (checkbox6.isSelected() || checkbox7.isSelected() || checkbox8.isSelected()) {
                 b = Math.min(b1, b2);
                 bd = b / d;
                 δ=Math.min(δ1,δ2);
@@ -288,6 +291,7 @@ public class Model {
                 Prazr = Math.min(Prast, Math.min(Psmt, Psrez));
                 Km = 1 + 3 * ((1 + (δ1 / δ2) + 2 * (g / δ2)) / (1 + ((E2 * b2 * Math.pow(δ2, 3)) / (E1 * b1 * Math.pow(δ1, 3)))));
                 PrazrodinPr = (1 / Km) * Prazr;
+                Prazr=PrazrodinPr;//переприсвоение для таблицы результатов
                 ηrast = Prast / P;
                 ηsrez = Psrez / P;
                 ηsmt = Psmt / P;
@@ -295,7 +299,7 @@ public class Model {
                 ηpr=0.0;
                 Ppr=0.0;
 
-            }
+           // }
         }
             /*
             Двухсрезная одинарная проушина осевая сила
@@ -347,7 +351,11 @@ public class Model {
         */
             else if ((checkbox2.isSelected() && checkbox5.isSelected())&&checkbox11.isSelected()) {
                 uv = 0.65 * Math.abs(ad - 1) + 1.35;
+                Psrez = 0.0;
                 Psmt = uv * d * δ * σ;
+                ηrast=0.0;
+                ηsrez = 0.0;
+                ηpr = 0.0;
                 if (checkbox6.isSelected()) {
                     if ((e >= 1) && (e <= 1.2)) {
                         kx = -0.0034995432724827 * Math.pow(bd, 6) + 0.0547907117288560 * Math.pow(bd, 5) - 0.3262309290003030 * Math.pow(bd, 4) + 0.8444566291000230 * Math.pow(bd, 3) - 0.4609847973624710 * Math.pow(bd, 2) - 1.98351737858684008 * bd + 3.5062002683841300;
@@ -385,33 +393,39 @@ public class Model {
                 ky = -0.0298249707557261 * Math.pow(hd, 6) + 0.0789122361456975 * Math.pow(hd, 5) + 0.0352590117836371 * Math.pow(hd, 4) - 0.2713984944857660 * Math.pow(hd, 3) - 0.0271109379245900 * Math.pow(hd, 2) + 1.1504565558716400 * hd - 0.0035987823155210;
                 Ppr = ky * d * δ * σ;
                 Prazr = 1 / Math.pow(Math.pow((Math.cos((Math.toRadians(α))) / Prast), 1.6) + Math.pow((Math.sin((Math.toRadians(α))) / Ppr), 1.6), 0.625);
-                ηrazr=Prazr/P;
-                ηrast=0.0;
-                ηsrez=0.0;
+                ηrazr = Prazr / P;
                 ηsmt=Psmt/P;
+
 
             }
        /*
        Одинарная проушина совместная сила
         */
             else if ((checkbox2.isSelected() && checkbox5.isSelected()&&checkbox10.isSelected())) {
+                uv = 0.65 * Math.abs(ad - 1) + 1.35;
+                Psrez = 0.0;
+                Psmt = uv * d * δ * σ;
+                ηrast=0.0;
+                ηsrez = 0.0;
+                ηpr = 0.0;
                 if (checkbox6.isSelected() || checkbox7.isSelected() || checkbox8.isSelected()) {
                     kx = 0.565 + 0.46 * e - 0.1 * bd;
                     if (kx > 1) {
                         kx = 1;
                     }
                     Prast = kx * ((b - d) * δ) * σ;
-
                     ky = -0.0298249707557261 * Math.pow(hd, 6) + 0.0789122361456975 * Math.pow(hd, 5) + 0.0352590117836371 * Math.pow(hd, 4) - 0.2713984944857660 * Math.pow(hd, 3) - 0.0271109379245900 * Math.pow(hd, 2) + 1.1504565558716400 * hd - 0.0035987823155210;
                     Ppr = ky * d * δ * σ;
                     Prazr = 1 / Math.pow(Math.pow((Math.cos((Math.toRadians(α))) / Prast), 1.6) + Math.pow((Math.sin((Math.toRadians(α))) / Ppr), 1.6), 0.625);
-                    ηrazr = Prazr / P;
-                    ηrast = 0.0;
-                    ηsrez = 0.0;
-                }
-            }
+                    //ηpr=Ppr/P;
 
+                }
+                ηrazr = Prazr / P;
+                ηsmt=Psmt/P;
+            }
     }
+
+
 
     String getResultPrast() {
         String formattedDouble = (new DecimalFormat("#0.00").format(Prast));

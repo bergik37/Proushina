@@ -31,8 +31,8 @@ public class Controller extends View implements Initializable {
     private TextField myTextField5;
     @FXML
     private TextField myTextField6;
-   /* @FXML
-    private TextField myTextField7;*/
+    /* @FXML
+     private TextField myTextField7;*/
     @FXML
     private TextField myTextField8;
     @FXML
@@ -86,35 +86,177 @@ public class Controller extends View implements Initializable {
 
     private Model model = new Model();
 
-   @Override
+    @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-       myTextField1.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField2.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField3.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField4.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField6.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField1.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField2.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField3.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField4.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField6.setTextFormatter(new AlphaNumericTextFormatter());
 //       myTextField7.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField8.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField9.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField10.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField11.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField20.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField21.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField22.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField23.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField24.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField25.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField26.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField27.setTextFormatter(new AlphaNumericTextFormatter());
-       myTextField28.setTextFormatter(new AlphaNumericTextFormatter());
-   }
-/*
-Кнопка решения
- */
+        myTextField8.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField9.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField10.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField11.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField20.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField21.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField22.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField23.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField24.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField25.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField26.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField27.setTextFormatter(new AlphaNumericTextFormatter());
+        myTextField28.setTextFormatter(new AlphaNumericTextFormatter());
+
+checkbox9.setDisable(true);
+
+    }
+
+    /*
+    Кнопка решения
+     */
+    @FXML
+    public void select() throws Exception {
+      if(checkbox1.isSelected())
+
+    {
+        //myTextField1.setDisable(true);
+        checkbox2.setDisable(true);
+        checkbox4.setDisable(true);
+        checkbox5.setDisable(true);
+        checkbox10.setDisable(true);
+        checkbox11.setDisable(true);
+        //myTextField1.setOpacity(0.5);
+        checkbox6.setDisable(true);
+        checkbox7.setDisable(true);
+        checkbox8.setDisable(true);
+    }
+     else
+    {
+        checkbox2.setDisable(false);
+        checkbox4.setDisable(false);
+        checkbox5.setDisable(false);
+        checkbox10.setDisable(false);
+        checkbox11.setDisable(false);
+        checkbox6.setDisable(false);
+        checkbox7.setDisable(false);
+        checkbox8.setDisable(false);
+    }
+}
+
+    public void select2() throws Exception {
+        if (checkbox2.isSelected()) {
+            checkbox1.setDisable(true);
+            myTextField8.setDisable(true);
+            myTextField9.setDisable(true);
+            myTextField10.setDisable(true);
+            myTextField11.setDisable(true);
+            myTextField22.setDisable(true);
+            myTextField23.setDisable(true);
+            myTextField24.setDisable(true);
+        }
+        else{
+            checkbox1.setDisable(false);
+            myTextField8.setDisable(false);
+            myTextField9.setDisable(false);
+            myTextField10.setDisable(false);
+            myTextField11.setDisable(false);
+            myTextField22.setDisable(false);
+            myTextField23.setDisable(false);
+            myTextField24.setDisable(false);
+        }
+    }
+    public void select3() throws Exception {
+        if (checkbox3.isSelected()) {
+            checkbox4.setDisable(true);
+            checkbox5.setDisable(true);
+            myTextField25.setDisable(true);
+            myTextField26.setDisable(true);
+            myTextField27.setDisable(true);
+            myTextField28.setDisable(true);
+
+        }
+        else{
+            checkbox4.setDisable(false);
+            checkbox5.setDisable(false);
+            myTextField25.setDisable(false);
+            myTextField26.setDisable(false);
+            myTextField27.setDisable(false);
+            myTextField28.setDisable(false);
+        }
+    }
+
+    public void select4() throws Exception {
+        if (checkbox4.isSelected()) {
+            checkbox3.setDisable(true);
+            checkbox5.setDisable(true);
+        }
+        else{
+            checkbox3.setDisable(false);
+            checkbox5.setDisable(false);
+
+        }
+    }
+
+    public void select5() throws Exception {
+
+    }
+
+    public void select6() throws Exception {
+        if(checkbox6.isSelected()){
+            checkbox7.setDisable(true);
+            checkbox8.setDisable(true);
+        }
+        else{
+            checkbox7.setDisable(false);
+            checkbox8.setDisable(false);
+        }
+    }
+    public void select7() throws Exception {
+        if(checkbox7.isSelected()){
+            checkbox8.setDisable(true);
+            checkbox6.setDisable(true);
+        }
+        else{
+            checkbox8.setDisable(false);
+            checkbox6.setDisable(false);
+        }
+    }
+    public void select8() throws Exception {
+        if(checkbox8.isSelected()){
+            checkbox7.setDisable(true);
+            checkbox6.setDisable(true);
+        }
+        else{
+            checkbox7.setDisable(false);
+            checkbox6.setDisable(false);
+        }
+    }
+    public void select10() throws Exception {
+        if(checkbox10.isSelected()) {
+            checkbox11.setDisable(true);
+        }
+            else{
+                checkbox11.setDisable(false);
+            }
+        }
+
+    public void select11() throws Exception {
+        if(checkbox11.isSelected()) {
+            checkbox10.setDisable(true);
+        }
+        else{
+            checkbox10.setDisable(false);
+        }
+    }
+
+
     @FXML
     public void solve() throws Exception {
+
         this.go();
+
     }
     private void go(){
         // отдаем классу модель нужные данные
@@ -152,6 +294,7 @@ public class Controller extends View implements Initializable {
      }*/
 
 
+
         model.setCheckBox1(checkbox1);
         model.setCheckBox2(checkbox2);
         model.setCheckBox3(checkbox3);
@@ -183,23 +326,7 @@ public class Controller extends View implements Initializable {
         myTextField30(model.getResultηpr());
     }
 
-    public void maxsize() throws FileNotFoundException {
-        Image img = new Image(new FileInputStream("TipProushin6.jpg"));
-        ImageView imv=new ImageView(img);
-        imv.setViewport(new Rectangle2D(100,100,500,500));
-        imv.setPreserveRatio(true);
-        imv.setFitHeight(200);
-        imv.setFitWidth(200);
-        imv.setX(10);
-        imv.setY(50);
-        imv.setLayoutX(50);
-        imv.setLayoutY(50);
-        imv.setSmooth(true);
 
-      //  imv.setBlendMode(BlendMode.DARKEN);
-       // imv.setCursor(Cursor.TEXT);
-
-    }
 
 
    /* public void createWord() throws IOException {
