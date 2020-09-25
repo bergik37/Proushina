@@ -12,6 +12,7 @@ import javafx.scene.image.ImageView;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import static java.lang.Double.parseDouble;
@@ -324,6 +325,30 @@ checkbox9.setDisable(true);
         //myTextField7(model.getResultzapas());
         myTextField29(model.getResultPpr());
         myTextField30(model.getResultηpr());
+    }
+
+    @FXML
+    public void otchet() throws Exception {
+
+        this.Otchet();
+    }
+
+    private void Otchet() {
+
+        //model.otchet();
+        if (checkbox2.isSelected()&&checkbox3.isSelected()&&checkbox10.isSelected()&&(checkbox6.isSelected()||checkbox7.isSelected()||checkbox8.isSelected()||checkbox9.isSelected())){
+            model.otchet();
+        }
+        else if (checkbox2.isSelected()&&checkbox3.isSelected()&&checkbox11.isSelected()){
+            model.otchet2();
+        }
+        else if (checkbox2.isSelected()&&checkbox4.isSelected()) {
+            model.otchet3();
+        }
+        else if (checkbox2.isSelected()&&checkbox5.isSelected()) {
+            model.otchet4();
+        }
+
     }
 
 
