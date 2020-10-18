@@ -1,9 +1,7 @@
 package sample;
 
 
-import com.spire.doc.documents.BackgroundType;
-import com.spire.doc.documents.Paragraph;
-import com.spire.doc.documents.ParagraphStyle;
+import com.spire.doc.documents.*;
 import com.spire.doc.fields.DocPicture;
 import com.spire.doc.fields.omath.OfficeMath;
 import javafx.scene.control.CheckBox;
@@ -12,7 +10,7 @@ import javafx.scene.control.CheckBox;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import com.spire.doc.*;
-import com.spire.doc.documents.WatermarkLayout;
+
 import java.awt.*;
 
 public class Model {
@@ -516,6 +514,13 @@ public class Model {
 
         DocPicture picture = paragraph4.appendPicture("D:\\IntelIdeaProect\\Proushina\\src\\sample\\Otchet1.png");
 
+        Paragraph paragraph5 = section.addParagraph();
+
+
+        //paragraph5.set;
+        paragraph5.setText("Рисунок 1. Схема проушины");
+
+
 
         //Set image width
 
@@ -528,34 +533,6 @@ public class Model {
         //Set image height
 
         picture.setHeight(250f);
-
-        String[] latexMathCode1 = {
-                "x^{2}+\\sqrt{{x^{2}+1}}+1",
-                "2\\alpha - \\sin y + "+P
-
-        };
-
-        Paragraph paragraph5 = section.addParagraph();
-
-        OfficeMath officeMath;
-
-        //Table table1 = section.getTables().get(0);
-
-        for (int i = 0; i < latexMathCode1.length; i++) {
-
-            //  paragraph5 = table1.getRows().get(i + 1).getCells().get(0).addParagraph();
-
-            // paragraph5.setText(latexMathCode1[i]);
-
-            //paragraph5 = table1.getRows().get(i + 1).getCells().get(1).addParagraph();
-
-            officeMath = new OfficeMath(document);
-
-            officeMath.fromLatexMathCode(latexMathCode1[i]);
-
-            paragraph5.getItems().add(officeMath);
-
-        }
 
         //Add a table
 
@@ -626,8 +603,51 @@ public class Model {
         table.get(9,1).addParagraph().appendText("сила, действующая на проушину, Н");
         table.get(9,2).addParagraph().appendText(""+P);
 
+        //Формула
+        Paragraph paragraph6 = section.addParagraph();
+
+        paragraph6.setText("1.Разрыв по сечению проушины, проходящему через центр отверстия:");
+
+        paragraph6.getFormat().setBeforeSpacing(20);
+
+
+
+        String[] latexMathCode1 = {
+                "P_{PACT} = ",
+                "k_{x}",
+                "F_{PACT}",
+                "L^*"+" = "+kx+Prast+σ
+
+
+        };
+
+
+
+        //style1.getCharacterFormat().setPosition(10);
+
+        OfficeMath officeMath;
+
+        //Table table1 = section.getTables().get(0);
+
+        for (int i = 0; i < latexMathCode1.length; i++) {
+
+            //  paragraph5 = table1.getRows().get(i + 1).getCells().get(0).addParagraph();
+
+            // paragraph5.setText(latexMathCode1[i]);
+
+            //paragraph5 = table1.getRows().get(i + 1).getCells().get(1).addParagraph();
+
+            officeMath = new OfficeMath(document);
+
+            officeMath.fromLatexMathCode(latexMathCode1[i]);
+
+            paragraph6.getItems().add(officeMath);
+
+        }
+
 
         document.saveToFile(name, FileFormat.Docx);
+
 
     }
 
