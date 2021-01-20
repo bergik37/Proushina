@@ -16,10 +16,9 @@ import java.awt.*;
 public class Model {
 
 
-    private double kx;
+
     private double uv;
-
-
+    private double kx;
     private double b;
     private double d;
     private double a;
